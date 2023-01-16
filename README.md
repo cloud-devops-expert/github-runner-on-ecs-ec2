@@ -15,9 +15,9 @@
 
 - ex.: containerUserId=1001
 - create a user account on the container image using a hardcoded user id:
-    - `sudo useradd -u **${containerUserId}** runner`
+    - `sudo useradd -u ${containerUserId} runner`
 - on the host launch configuration userdata, please put the command:
-    - `sudo setfacl --modify user:**${containerUserId}**:rw /var/run/docker.sock`
+    - `sudo setfacl --modify user:${containerUserId}:rw /var/run/docker.sock`
 - these instructions should fix the permission problems
 
 ## Conclusion
